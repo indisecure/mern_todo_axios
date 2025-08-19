@@ -23,7 +23,8 @@ app.get('/',(req,res)=>{
   res.sendFile(path.join(__dirname,'dist/index.html'))
 })
 
-app.use("/api", userRouter); 
+app.use("/api", userRouter);
+ 
 const PORT = process.env.PORT || 5000; 
 
 app.listen(PORT, async () => {
