@@ -3,7 +3,7 @@ const { client } = require('../database/dbConnection');
 
 module.exports = async (req, res) => {
   const { token } = req.query;
-  if (token !== process.env.CRON_SECRET) {
+  if (token !== process.env.CRONE_SECRET) {
     return res.status(403).json({
       success: false,
       message: 'Invalid token',
