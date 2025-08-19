@@ -7,6 +7,12 @@ const getCollection = () => {
     const collection = client.db('axios').collection('axios')
     return collection
 }
+//Trigger-Reminder
+
+const triggerReminder = require('../utils/trigger-reminder');
+router.get('/todo/trigger-reminder', triggerReminder);
+
+
 //GET    
 router.get('/todo', async (req, res) => {
     try {
