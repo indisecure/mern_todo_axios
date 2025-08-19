@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { client } = require('../database/dbConnection');
-
+console.log('✅ trigger_reminder.js loaded');
 module.exports = async (req, res) => {
   const { token } = req.query;
   if (token !== process.env.SECRET) {
