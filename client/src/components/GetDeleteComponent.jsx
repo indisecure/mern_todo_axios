@@ -2,8 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom"
 import { Table } from "react-bootstrap"
-function GetDeleteComponent() {
-    const date = new Date().toDateString()
+function GetDeleteComponent() {    
     const [todos, setTodos] = useState([])      
         const getAllTodos = async () => {
         try {
@@ -41,8 +40,7 @@ function GetDeleteComponent() {
             <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th> Task </th>
-                        <th> Date</th>
+                        <th> Task </th>                        
                         <th className="text-center"> Actions </th>
                     </tr>
                 </thead>
@@ -57,8 +55,7 @@ function GetDeleteComponent() {
                                     style={{ width: '20px', height: '20px', marginRight: '10px' }}
                                 />
                                 <span className="text-capitalize">{todo.task}</span>
-                            </td>
-                            <td>{date}</td>
+                            </td>                            
                             <td>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                                     <Link to={`/edit/${todo._id}`}>
