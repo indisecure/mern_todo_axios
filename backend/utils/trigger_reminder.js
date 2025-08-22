@@ -26,9 +26,11 @@ module.exports = async (req, res) => {
       );
     }
 
-    res.end();
+    res.json({
+      success:true
+    })
   } catch (err) {
-    console.error('MongoDB error:', err); 
-    res.end();
+    console.error('MongoDB error:', err);    
+    res.status(500).json({ success: false, error: 'Internal Server Error' });
   }
 };
